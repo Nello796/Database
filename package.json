@@ -1,0 +1,18 @@
+{
+  "name": "databse",
+  "version": "1.0.0",
+  "description": "simple database",
+  "main": "index.js",
+  "dependencies": {
+    "bootstrap": "^4.4.1",
+    "jquery": "^3.4.1"
+  },
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.12.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "fabion delishaj",
+  "license": "MIT"
+}

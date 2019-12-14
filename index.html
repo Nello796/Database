@@ -1,0 +1,110 @@
+<!doctype html> 
+<html dir="ltr" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+	<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+	<link rel="stylesheet" href="css/style.css">
+    </head>
+    <body class="d-flex flex-column  w-100 align-items-center">
+	    
+            <!------------------------------------------>
+            <!-- Database inputs and outputs ----------->
+                
+	    <!-- Insert -->
+	    <div class="modal fade" id="insert-contact" tabindex="-1" role="dialog" aria-hidden="true">
+		    <div class="modal-dialog modal-dialog-centered" role="document">
+			    <div class="modal-content">
+				    <div class="modal-header bg-dark text-light">
+					    <h2 class="font-weight-bold display-5">Add user</h2>
+					    <button type="button" class="close text-light" data-dismiss="modal" aria-label="Close">
+						    <span aria-hidden="true">&times;</span>
+					    </button>
+				    </div>
+				    <div class="modal-body">
+					    <fieldset class="database_inputs insert d-flex flex-column p-3">
+						    <input type="text" id="first_name" class="form-control my-1" name="first_name" placeholder="First Name">
+						    <input type="text" id="last_name" class="form-control my-1" name="last_name" placeholder="Last Name">
+						    <input type="text" id="email" class="form-control my-1" name="email" placeholder="Email">
+						    <input type="tel" id="phone_number" class="form-control my-1" name="phone_number" placeholder="Phone Number">
+						    <input type="button" id="btn_insert" class="form-control btn btn-success my-1" name="btn_insert" value="Insert">
+					    </fieldset>
+				    </div>
+				    <div id="insert-error-footer" class="modal-footer justify-content-start d-none alert alert-danger mb-0" role="alert">
+					    <div id="errors-insert"></div>
+				    </div>
+				    <div id="input-insert-success" class="modal-footer alert alert-success justify-content-center mb-0" role="alert">
+					    <p>The user has been added successfully</p>
+				    </div>
+			    </div>
+		    </div>
+	    </div>
+	    
+	    <!-- Update -->
+	    <div class="modal fade" id="update-contact" tabindex="-1" role="dialog" aria-hidden="true">
+		    <div class="modal-dialog modal-dialog-centered" role="document">
+			    <div class="modal-content">
+				    <div class="modal-header bg-dark text-light">
+					    <h2 class="font-weight-bold display-5">Update</h2>
+					    <button type="button" class="close text-light" data-dismiss="modal" aria-label="Close">
+						    <span aria-hidden="true">&times;</span>
+					    </button>
+				    </div>
+				    <div class="modal-body">
+					    <fieldset class="database_inputs update d-flex flex-column p-3">
+						    <input type="text" id="id_update" class="d-none" name="id_update">
+						    <input type="text" id="first_name_update" class="form-control my-1" name="first_name_update" placeholder="First Name">
+						    <input type="text" id="last_name_update" class="form-control my-1" name="last_name_update" placeholder="Last Name">
+						    <input type="text" id="email_update" class="form-control my-1" name="email_update" placeholder="Email">
+						    <input type="tel" id="phone_number_update" class="form-control my-1" name="phone_number_update" placeholder="Phone Number">
+						    <input type="button" id="btn_confirm_update" class="form-control btn btn-success my-1" name="btn_confirm_update" value="Confirm update">
+					    </fieldset>
+				    </div>
+				    <div id="update-error-footer" class="modal-footer justify-content-start d-none alert alert-danger mb-0" role="alert">
+					    <div id="errors-update"></div>
+				    </div>
+				    <div id="input-update-success" class="modal-footer alert alert-success justify-content-center mb-0" role="alert">
+					    <p>The user has been updated successfully</p>
+				    </div>
+
+
+			    </div>
+		    </div>
+	    </div>
+	    
+	    <!-- Error messages -->
+	    <div id="errors"></div>
+
+	<form name="form_wrap" id="form">
+            <!------------------------------------>
+            <!-- Results from database ----------->
+            <table class="table mt-5 table-bordered bg-light shadow-lg">	
+                <thead>
+                    <tr class="thead-dark">
+                        <th class="align-middle text-center" scope="col">Checkbox</th>
+			<th class="align-middle text-center" scope="col">First name <i id="btn_sort_fname" class="fas fa-sort-alpha-up ml-3" name="up"></i></th>
+                        <th class="align-middle text-center" scope="col">Last name <i id="btn_sort_lname" class="fas fa-sort-alpha-up ml-3" name="up"></i></th>
+                        <th class="align-middle text-center" scope="col">Email address</th>
+                        <th class="align-middle text-center" scope="col">Phone number</th>
+                        <th class="align-middle text-center" scope="col">Update</th>
+                    </tr>
+                </thead>
+
+                <tbody id="list_database">
+                </tbody>
+            </table>
+
+        </form>
+
+	<div class="d-flex mt-2">
+		<td><input type="button" id="btn_delete" class="btn btn-danger mr-3 shadow-lg" value="Delete"></td>
+		<td colspan="5"><input type="button" class="btn btn-primary font-weight-bold shadow-lg" value="Insert another contact" data-toggle="modal" data-target="#insert-contact"></td>
+	</div>
+	<script src="node_modules/jquery/dist/jquery.min.js"></script>
+ 	<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <!-- Other JavaScript -->
+        <script src="js/requests.js"></script>
+
+    </body>
+</html>
