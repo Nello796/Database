@@ -146,7 +146,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" || $_SERVER["REQUEST_METHOD"] == "GET")
             $validator_email = check_email($email);
         }
 
-        //Write the variable's value in contancts.txt file
+        // Write the variable's value in contancts.txt file
         if (!$inputs_stauts && $validator_email[0] && $duplicate_phone_number[0]) {
 
             // Search the the number of the registration on the first string saving it in a variable and add + 1
@@ -161,7 +161,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" || $_SERVER["REQUEST_METHOD"] == "GET")
             file_put_contents("../db/contacts.txt", $database);
         }
 
-        //Input errors
+        // Input errors
         if ($inputs_stauts) { echo $inputs_stauts; }
         if (!$duplicate_result_email[0]) { echo $input_errors[3]; }
         if (!$validator_email[0]) { echo $validator_email[1]; }

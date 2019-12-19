@@ -1,16 +1,33 @@
 <!doctype html> 
 <html dir="ltr" lang="en">
     <head>
+		    <!--
+                    /-- Main head setttings --/
+            1) Set character encoding for the document.
+            2) Viewport for responsive web design.
+            3) Document Title.
+            4) Meta Description.
+            5) Favicon.
+            6) Helps prevent duplicate content issues.
+        -->
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-	<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-	<link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
-	<link rel="stylesheet" href="css/style.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+		<title>Database</title>
+		<meta name="description" content="Simple database without using mysql">
+		<link rel="icon" type="image/png" href="media/favicon-32x32.png">
+		<link rel="canonical" href="http://nello796.com">
+		
+		<!-- Bootstrap, Font awesome -->
+		<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+
+		<!-- Other styles -->
+		<link rel="stylesheet" href="css/style.css">
     </head>
     <body class="d-flex flex-column  w-100 align-items-center">
 	    
-            <!------------------------------------------>
-            <!-- Database inputs and outputs ----------->
+        <!------------------------------------------>
+        <!-- Database inputs and outputs ----------->
                 
 	    <!-- Insert -->
 	    <div class="modal fade" id="insert-contact" tabindex="-1" role="dialog" aria-hidden="true">
@@ -76,7 +93,7 @@
 	    <!-- Error messages -->
 	    <div id="errors"></div>
 
-	<form name="form_wrap" id="form">
+		<form name="form_wrap" id="form">
             <!------------------------------------>
             <!-- Results from database ----------->
             <table class="table mt-5 table-bordered bg-light shadow-lg">	
@@ -97,12 +114,14 @@
 
         </form>
 
-	<div class="d-flex mt-2">
-		<td><input type="button" id="btn_delete" class="btn btn-danger mr-3 shadow-lg" value="Delete"></td>
-		<td colspan="5"><input type="button" class="btn btn-primary font-weight-bold shadow-lg" value="Insert another contact" data-toggle="modal" data-target="#insert-contact"></td>
-	</div>
-	<script src="node_modules/jquery/dist/jquery.min.js"></script>
- 	<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+		<div class="d-flex mt-2">
+			<td><input type="button" id="btn_delete" class="btn btn-danger mr-3 shadow-lg" value="Delete"></td>
+			<td colspan="5"><input type="button" class="btn btn-primary font-weight-bold shadow-lg" value="Insert another contact" data-toggle="modal" data-target="#insert-contact"></td>
+		</div>
+
+		<!-- jQuery, Bootstrap js -->
+		<script src="node_modules/jquery/dist/jquery.min.js"></script>
+		<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
         <!-- Other JavaScript -->
         <script src="js/requests.js"></script>
 
