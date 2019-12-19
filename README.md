@@ -3,14 +3,14 @@
 ## Project description
 
     This is a simple database made by scratch without using MYSQL and any particular tool. 
-> The database has a simple configuration: 
+    The database has a simple configuration: 
 - INSERT
 - DELETE
 - UPDATE
 - SORT
 
-    All the requests are sent with jQuery-ajax and handled with PHP,  also the data are stored in a .txt file.
-    The  data are saved in this format: ID|name|Surname|Email|Number
+        All the requests are sent with jQuery-ajax and handled with PHP,  also the data are stored in a .txt file.
+        The  data are saved in this format: ID|name|Surname|Email|Number
 
 ## Tools Used
 
