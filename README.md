@@ -22,6 +22,6 @@
 
 ## Install and Build
 
-    The database doesn't need any particular configuration to works. 
-    You just need to upload the folder in the server and set  /db/contacts.txt permission on "777".
-    If you have any problem, don't hesitate to contact me, I will be happy to help you.
+> The database doesn't need any particular configuration to works. 
+> You just need to upload the folder in the server and set  /db/contacts.txt permission on "777".
+> If you have any problem, don't hesitate to contact me, I will be happy to help you.
