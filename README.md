@@ -9,6 +9,7 @@
 - UPDATE
 - SORT
 
+> The main style is made with Bootstrap.
 > All the requests are sent with jQuery-ajax and handled with PHP,  also the data are stored in a .txt file.
 > The  data are saved in this format: ID|name|Surname|Email|Number
 
@@ -16,6 +17,7 @@
 
 - HTML
 - CSS
+- Bootstrap
 - JavaScript
 - jQuery
 - PHP
